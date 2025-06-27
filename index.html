@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page With Light/Dark Mode</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="big-wrapper light">
+        <img src="c:\Users\singh\Downloads\blue-desk-background-with-coffee-laptop_1235831-133965.jpg" alt="" class="shape" />
+
+        <header>
+          <div class="container">
+            <div class="logo">
+              <img src="c:\Users\singh\Downloads\Copilot_20250530_130223.png" alt="Logo" />
+              <h3>Admire Tech Vision LLP</h3>
+            </div>
+
+            <div class="links">
+             <ul>
+    <ul>
+        <a href="Page1.html" class="btn">home</a>
+        <a href="Page2.html" class="btn">Services</a>
+        <a href="Page3.html" class="btn">Courses</a>
+        <a href="Page4.html" class="btn">Equiry</a>
+   </ul>
+
+
+    
+
+
+<!-- Placeholder for Dynamic Content -->
+<div id="content"></div>
+
+            </div>
+
+            <div class="overlay"></div>
+
+            <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="showcase-area">
+          <div class="container">
+            <div class="left">
+              <div class="big-title">
+                <h1>Future is here,</h1>
+                <h1>Start Exploring now.</h1>
+              </div>
+              <p class="text">
+                Building on our established expertise in CAD, CAM, BIM, and now our newly launched IT services, 
+                including high-performance computer hardware and innovative software solutions,
+                 we offer a complete ecosystem.
+              </p>
+              <div class="cta">
+                <a href="#" class="btn">Get started</a>
+              </div>
+            </div>
+
+            <div class="right">
+              <img src="c:\Users\singh\Downloads\kobu-agency-7okkFhxrxNw-unsplash.jpg" alt="Person Image" class="person" />
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-area">
+          <div class="container">
+             <button class="toggle-btn">
+              <i class="far fa-moon"></i>
+              <i class="far fa-sun"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <!-- JavaScript Files -->
+     <button onclick="goToPage2()">Go to Page 2</button>
+
+<script>
+function goToPage2() {
+    window.location.href = "Page1.html"; 
+}
+</script>
+
+     <script>
+function showEnquiryForm() {
+    document.getElementById("content").innerHTML = `
+        <h2>Enquiry Form</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    `;
+}
+</script>
+
+<script>
+function showContent(page) {
+    let content = {
+        "home": "<h2>Welcome to Amire Tech vision LLP</h2><p>Details about Home.</p>",
+        "services": "<h2>Our Services</h2><p>Our services division, set up exclusively to serve to the requirements of the technical service of our customers, has the experience and expertise to configure and integrate the required CAD/CAM Solutions into the design, engineering and manufacturing workflow of our customers.</p>",
+        "courses": "<h2>Available Courses</h2><p>Details about Courses.</p>",
+        "enquiry": "<h2>Enquiry Form</h2><p>Contact us for enquiries.</p>"
+    };
+
+    // Select the container where content should be displayed
+    let contentContainer = document.getElementById("content");
+
+    if (contentContainer && content[page]) {
+        contentContainer.innerHTML = content[page];
+    } else {
+        contentContainer.innerHTML = "<h2>Page not found</h2>";
+    }
+}
+
+    
+</script>
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
